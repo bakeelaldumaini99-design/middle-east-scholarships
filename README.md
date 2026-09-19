@@ -1,6 +1,10 @@
 # مؤسسة الشرق الأوسط للمنح الدراسية
 
+![Deploy to GitHub Pages](https://github.com/bakeelaldumaini99-design/middle-east-scholarships/actions/workflows/deploy.yml/badge.svg)
+
 موقع تعريفي عربي بالكامل (RTL) لمؤسسة الشرق الأوسط للمنح الدراسية — منح دراسية لبرامج **البكالوريوس** و**برنامج اللغة الصينية** في أعرق الجامعات الصينية.
+
+**الموقع المباشر:** https://bakeelaldumaini99-design.github.io/middle-east-scholarships/
 
 ## أقسام الموقع
 
@@ -26,6 +30,10 @@ npm run dev      # خادم التطوير على http://localhost:3000
 npm run build    # بناء الإنتاج إلى dist/
 npm run preview  # معاينة نسخة الإنتاج
 ```
+
+## النشر التلقائي
+
+عند كل دفع (push) على الفرع `main` يقوم سير عمل GitHub Actions تلقائيًا ببناء المشروع ونشره على GitHub Pages.
 
 ## هيكل المشروع
 
