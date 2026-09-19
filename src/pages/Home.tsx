@@ -3,6 +3,7 @@ import Universities from '@/sections/Universities'
 import Bachelor from '@/sections/Bachelor'
 import ChineseProgram from '@/sections/ChineseProgram'
 import { Steps, Footer } from '@/sections/Steps'
+import Register from '@/sections/Register'
 import '../App.css'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Bachelor />
       <ChineseProgram />
       <Steps />
+      <Register />
       <Footer />
     </div>
   )
