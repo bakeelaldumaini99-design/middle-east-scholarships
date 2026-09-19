@@ -2,6 +2,7 @@ import Hero from '@/sections/Hero'
 import Universities from '@/sections/Universities'
 import Bachelor from '@/sections/Bachelor'
 import ChineseProgram from '@/sections/ChineseProgram'
+import Csca from '@/sections/Csca'
 import { Steps, Footer } from '@/sections/Steps'
 import Register from '@/sections/Register'
 import '../App.css'
@@ -13,6 +14,7 @@ export default function Home() {
       <Universities />
       <Bachelor />
       <ChineseProgram />
+      <Csca />
       <Steps />
       <Register />
       <Footer />

@@ -76,6 +76,7 @@ export function Footer() {
               <li><a className="hover:text-[#e6c86e]" href="#universities">الجامعات الشريكة</a></li>
               <li><a className="hover:text-[#e6c86e]" href="#bachelor">برامج البكالوريوس</a></li>
               <li><a className="hover:text-[#e6c86e]" href="#chinese">برنامج اللغة الصينية</a></li>
+              <li><a className="hover:text-[#e6c86e]" href="#csca">اختبار CSCA</a></li>
               <li><a className="hover:text-[#e6c86e]" href="#steps">خطوات التقديم</a></li>
               <li><a className="hover:text-[#e6c86e]" href="#register">التسجيل عبر المؤسسة</a></li>
             </ul>

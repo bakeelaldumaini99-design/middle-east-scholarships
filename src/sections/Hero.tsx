@@ -11,6 +11,7 @@ const navLinks = [
   { href: '#universities', label: 'الجامعات' },
   { href: '#bachelor', label: 'البكالوريوس' },
   { href: '#chinese', label: 'اللغة الصينية' },
+  { href: '#csca', label: 'اختبار CSCA' },
   { href: '#register', label: 'التسجيل' },
   { href: '#contact', label: 'تواصل معنا' },
 ]
