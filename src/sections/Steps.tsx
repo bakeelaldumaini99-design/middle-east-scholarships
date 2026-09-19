@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { applicationSteps } from '@/data/content'
-import { Phone, Mail, MapPin, GraduationCap } from 'lucide-react'
+import { Phone, Mail, GraduationCap } from 'lucide-react'
 
 export function Steps() {
   return (
@@ -48,22 +48,22 @@ export function Steps() {
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-emerald-950 text-white">
+    <footer id="contact" className="bg-[#101f3c] text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-400 text-emerald-950">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#c9a227] text-[#101f3c]">
                 <GraduationCap className="h-6 w-6" />
               </span>
               <span className="text-lg font-extrabold leading-tight">
                 مؤسسة الشرق الأوسط
-                <span className="block text-xs font-medium text-emerald-200/70">
+                <span className="block text-xs font-medium text-[#c8d3e8]/70">
                   للمنح الدراسية
                 </span>
               </span>
             </div>
-            <p className="mt-4 text-sm leading-relaxed text-emerald-100/70">
+            <p className="mt-4 text-sm leading-relaxed text-[#c8d3e8]/70">
               مؤسسة متخصصة في المنح الدراسية إلى الصين منذ أكثر من 15 عامًا،
               نساعد طلاب الشرق الأوسط على تحقيق طموحهم الأكاديمي في أعرق
               الجامعات الصينية.
@@ -72,40 +72,36 @@ export function Footer() {
 
           <div>
             <h4 className="font-extrabold">روابط سريعة</h4>
-            <ul className="mt-4 space-y-2 text-sm text-emerald-100/70">
-              <li><a className="hover:text-emerald-300" href="#universities">الجامعات الشريكة</a></li>
-              <li><a className="hover:text-emerald-300" href="#bachelor">برامج البكالوريوس</a></li>
-              <li><a className="hover:text-emerald-300" href="#chinese">برنامج اللغة الصينية</a></li>
-              <li><a className="hover:text-emerald-300" href="#steps">خطوات التقديم</a></li>
-              <li><a className="hover:text-emerald-300" href="#register">التسجيل عبر المؤسسة</a></li>
+            <ul className="mt-4 space-y-2 text-sm text-[#c8d3e8]/70">
+              <li><a className="hover:text-[#e6c86e]" href="#universities">الجامعات الشريكة</a></li>
+              <li><a className="hover:text-[#e6c86e]" href="#bachelor">برامج البكالوريوس</a></li>
+              <li><a className="hover:text-[#e6c86e]" href="#chinese">برنامج اللغة الصينية</a></li>
+              <li><a className="hover:text-[#e6c86e]" href="#steps">خطوات التقديم</a></li>
+              <li><a className="hover:text-[#e6c86e]" href="#register">التسجيل عبر المؤسسة</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-extrabold">تواصل معنا</h4>
-            <ul className="mt-4 space-y-3 text-sm text-emerald-100/70">
+            <ul className="mt-4 space-y-3 text-sm text-[#c8d3e8]/70">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-emerald-300" />
+                <Phone className="h-4 w-4 text-[#e6c86e]" />
                 <span>واتساب (اليمن):</span>
                 <span dir="ltr" className="font-bold text-white">+967 716 621 214</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-emerald-300" />
+                <Phone className="h-4 w-4 text-[#e6c86e]" />
                 <span dir="ltr">+971 50 000 0000</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-emerald-300" />
+                <Mail className="h-4 w-4 text-[#e6c86e]" />
                 info@middle-east-scholarships.org
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-300" />
-                شارع الجامعة، الحي الدبلوماسي — المكتب الرئيسي
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-6 text-center text-sm text-emerald-100/50">
+        <div className="mt-12 border-t border-white/10 pt-6 text-center text-sm text-[#c8d3e8]/50">
           © {new Date().getFullYear()} مؤسسة الشرق الأوسط للمنح الدراسية — جميع الحقوق محفوظة
         </div>
       </div>

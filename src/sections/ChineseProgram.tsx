@@ -36,17 +36,17 @@ const features = [
 
 export default function ChineseProgram() {
   return (
-    <section id="chinese" className="bg-emerald-950 py-20 text-white">
+    <section id="chinese" className="bg-[#101f3c] py-20 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-emerald-300">
+          <span className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-[#e6c86e]">
             <Languages className="h-4 w-4" />
             برنامج اللغة الصينية
           </span>
           <h2 className="mt-3 text-3xl font-black sm:text-4xl">
             اتقن اللغة الصينية خطوة بخطوة
           </h2>
-          <p className="mt-4 text-emerald-100/80">
+          <p className="mt-4 text-[#c8d3e8]">
             بوابتك الأولى نحو الدراسة الجامعية أو العمل في الصين. برنامج مكثف
             مصمم للناطقين بالعربية يأخذك من الحروف الأولى حتى الإتقان الكامل.
           </p>
@@ -60,17 +60,17 @@ export default function ChineseProgram() {
               className="relative border-0 bg-white/5 text-white shadow-none backdrop-blur transition-all hover:bg-white/10"
             >
               <CardContent className="p-6">
-                <span className="absolute -top-4 right-6 flex h-9 w-9 items-center justify-center rounded-full bg-emerald-400 font-black text-emerald-950">
+                <span className="absolute -top-4 right-6 flex h-9 w-9 items-center justify-center rounded-full bg-[#c9a227] font-black text-[#101f3c]">
                   {index + 1}
                 </span>
-                <Badge className="bg-emerald-400/15 font-bold text-emerald-300 hover:bg-emerald-400/15">
+                <Badge className="bg-[#e6c86e]/15 font-bold text-[#e6c86e] hover:bg-[#e6c86e]/15">
                   {level.level}
                 </Badge>
                 <h3 className="mt-3 text-xl font-extrabold">{level.title}</h3>
-                <div className="mt-1 text-sm font-semibold text-emerald-200">
+                <div className="mt-1 text-sm font-semibold text-[#e6c86e]/90">
                   {level.duration}
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-emerald-100/80">
+                <p className="mt-3 text-sm leading-relaxed text-[#c8d3e8]">
                   {level.description}
                 </p>
               </CardContent>
@@ -82,11 +82,11 @@ export default function ChineseProgram() {
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <div key={feature.title} className="flex flex-col items-center text-center">
-              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-400/15 text-emerald-300">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e6c86e]/15 text-[#e6c86e]">
                 <feature.icon className="h-6 w-6" />
               </span>
               <h4 className="mt-4 font-extrabold">{feature.title}</h4>
-              <p className="mt-2 text-sm leading-relaxed text-emerald-100/70">
+              <p className="mt-2 text-sm leading-relaxed text-[#c8d3e8]/80">
                 {feature.description}
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function ChineseProgram() {
           <Button
             asChild
             size="lg"
-            className="bg-emerald-400 font-bold text-emerald-950 hover:bg-emerald-300"
+            className="bg-[#c9a227] font-bold text-[#101f3c] hover:bg-[#e6c86e]"
           >
             <a href="#steps">
               سجّل في برنامج اللغة

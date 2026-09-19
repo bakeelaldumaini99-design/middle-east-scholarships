@@ -1,16 +1,27 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { GraduationCap, Menu, X } from 'lucide-react'
+import { Menu, X, Award, BadgeCheck, Languages, Plane, UserCheck, MessagesSquare, BookOpenCheck } from 'lucide-react'
 import { stats } from '@/data/content'
+import logo from '@/assets/logo.jpg'
+import heroImage from '@/assets/hero-classic.jpg'
 
 const navLinks = [
   { href: '#home', label: 'الرئيسية' },
+  { href: '#services', label: 'خدماتنا' },
   { href: '#universities', label: 'الجامعات' },
   { href: '#bachelor', label: 'البكالوريوس' },
   { href: '#chinese', label: 'اللغة الصينية' },
-  { href: '#steps', label: 'خطوات التقديم' },
   { href: '#register', label: 'التسجيل' },
   { href: '#contact', label: 'تواصل معنا' },
+]
+
+const services = [
+  { icon: Award, title: 'منح كاملة وجزئية' },
+  { icon: BadgeCheck, title: 'قبول جامعي موثوق' },
+  { icon: Languages, title: 'برامج لغة صينية' },
+  { icon: Plane, title: 'إرشاد الفيزا والسفر' },
+  { icon: UserCheck, title: 'متابعة حتى التخرج' },
+  { icon: MessagesSquare, title: 'استشارة مجانية' },
 ]
 
 export default function Hero() {
@@ -18,41 +29,45 @@ export default function Hero() {
 
   return (
     <div id="home">
-      {/* Navbar */}
-      <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <a href="#home" className="flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-              <GraduationCap className="h-6 w-6" />
-            </span>
-            <span className="text-lg font-extrabold leading-tight">
-              مؤسسة الشرق الأوسط
-              <span className="block text-xs font-medium text-muted-foreground">
-                للمنح الدراسية
+      {/* الشريط العلوي الكلاسيكي */}
+      <header className="sticky top-0 z-50 border-b-2 border-[#c9a227]/60 bg-[#faf7f0]/95 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6">
+          <a href="#home" className="flex items-center gap-3">
+            <img
+              src={logo}
+              alt="شعار مؤسسة الشرق الأوسط للمنح الدراسية"
+              className="h-14 w-14 rounded-full border-2 border-[#c9a227] object-cover shadow-sm"
+            />
+            <span className="leading-tight">
+              <span className="block text-xl font-bold text-[#1b2f52]" style={{ fontFamily: 'Amiri, serif' }}>
+                مؤسسة الشرق الأوسط
+              </span>
+              <span className="block text-xs font-semibold tracking-wide text-[#8a6d1d]">
+                للمنح الدراسية في الصين
               </span>
             </span>
           </a>
 
-          <nav className="hidden items-center gap-6 text-sm font-semibold lg:flex">
+          <nav className="hidden items-center gap-5 text-sm font-bold text-[#3d4d6d] xl:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-muted-foreground transition-colors hover:text-primary"
+                className="transition-colors hover:text-[#8a6d1d]"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden lg:block">
-            <Button asChild className="font-bold">
+          <div className="hidden xl:block">
+            <Button asChild className="bg-[#1b2f52] font-bold text-[#f0e6c8] hover:bg-[#101f3c]">
               <a href="#register">قدّم الآن</a>
             </Button>
           </div>
 
           <button
-            className="rounded-md p-2 hover:bg-muted lg:hidden"
+            className="rounded-md p-2 hover:bg-[#efe8d8] xl:hidden"
             onClick={() => setOpen(!open)}
             aria-label="القائمة"
           >
@@ -61,13 +76,13 @@ export default function Hero() {
         </div>
 
         {open && (
-          <nav className="border-t bg-white px-4 py-4 lg:hidden">
-            <ul className="flex flex-col gap-3 text-sm font-semibold">
+          <nav className="border-t border-[#c9a227]/40 bg-[#faf7f0] px-4 py-4 xl:hidden">
+            <ul className="flex flex-col gap-3 text-sm font-bold">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="block rounded-md px-2 py-2 text-muted-foreground hover:bg-muted hover:text-primary"
+                    className="block rounded-md px-2 py-2 text-[#3d4d6d] hover:bg-[#efe8d8] hover:text-[#8a6d1d]"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
@@ -75,7 +90,7 @@ export default function Hero() {
                 </li>
               ))}
               <li>
-                <Button asChild className="w-full font-bold">
+                <Button asChild className="w-full bg-[#1b2f52] font-bold text-[#f0e6c8] hover:bg-[#101f3c]">
                   <a href="#register">قدّم الآن</a>
                 </Button>
               </li>
@@ -84,48 +99,91 @@ export default function Hero() {
         )}
       </header>
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-bl from-emerald-950 via-emerald-900 to-teal-900 text-white">
-        <div className="pointer-events-none absolute -left-24 top-10 h-72 w-72 rounded-full bg-emerald-400/10 blur-3xl" />
-        <div className="pointer-events-none absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-teal-300/10 blur-3xl" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-28">
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-400/10 px-4 py-1.5 text-sm font-semibold text-emerald-200">
-              تسجيل الدفعة الجديدة مفتوح الآن
-            </span>
-            <h1 className="mt-6 text-4xl font-black leading-snug sm:text-5xl lg:text-6xl">
-              مستقبلك الأكاديمي يبدأ من الصين
-            </h1>
-            <p className="mt-6 text-lg leading-relaxed text-emerald-100/90 sm:text-xl">
-              مؤسسة الشرق الأوسط للمنح الدراسية تفتح لك أبواب أعرق الجامعات
-              الصينية — منح كاملة وجزئية لبرامج البكالوريوس وبرامج اللغة
-              الصينية، مع مرافقة كاملة من التقديم حتى التخرج.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-white font-bold text-emerald-900 hover:bg-emerald-50">
-                <a href="#bachelor">استكشف برامج البكالوريوس</a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-white/40 font-bold text-white hover:bg-white/10 hover:text-white"
+      {/* الواجهة الرئيسية */}
+      <section className="border-b-4 border-[#c9a227] bg-[#faf7f0]">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:py-20">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            {/* النص والخدمات */}
+            <div>
+              <span className="inline-flex items-center gap-2 rounded-sm border border-[#c9a227] bg-[#f5eed9] px-4 py-1.5 text-sm font-bold text-[#8a6d1d]">
+                <BookOpenCheck className="h-4 w-4" />
+                بخبرة تتجاوز 15 عامًا في التعليم الصيني
+              </span>
+              <h1
+                className="mt-6 text-4xl font-bold leading-snug text-[#1b2f52] sm:text-5xl lg:text-[3.4rem]"
+                style={{ fontFamily: 'Amiri, serif' }}
               >
-                <a href="#chinese">برنامج اللغة الصينية</a>
-              </Button>
+                مؤسسة الشرق الأوسط
+                <span className="mt-2 block text-[#8a6d1d]">للمنح الدراسية في الصين</span>
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed text-[#4a5878]">
+                بوابتك الموثوقة للدراسة في أعرق الجامعات الصينية — نوفّر منحًا
+                كاملة وجزئية لمرحلة البكالوريوس وبرامج اللغة الصينية، مع مرافقة
+                كاملة من أول استشارة حتى تخرّجك وعودتك.
+              </p>
+
+              {/* الخدمات */}
+              <div id="services" className="mt-8">
+                <h2 className="mb-4 flex items-center gap-3 text-xl font-bold text-[#1b2f52]" style={{ fontFamily: 'Amiri, serif' }}>
+                  <span className="h-px w-8 bg-[#c9a227]" />
+                  خدماتنا
+                  <span className="h-px flex-1 bg-[#c9a227]" />
+                </h2>
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {services.map((service) => (
+                    <div
+                      key={service.title}
+                      className="flex flex-col items-center gap-2 rounded-sm border border-[#c9a227]/50 bg-white px-3 py-4 text-center shadow-sm transition-colors hover:border-[#c9a227] hover:bg-[#f5eed9]"
+                    >
+                      <service.icon className="h-6 w-6 text-[#8a6d1d]" />
+                      <span className="text-sm font-bold text-[#1b2f52]">{service.title}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button asChild size="lg" className="bg-[#8a6d1d] font-bold text-white hover:bg-[#6f5717]">
+                  <a href="#register">سجّل الآن عبر المؤسسة</a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-[#1b2f52] font-bold text-[#1b2f52] hover:bg-[#1b2f52] hover:text-[#f0e6c8]"
+                >
+                  <a href="#universities">تصفح الجامعات</a>
+                </Button>
+              </div>
+            </div>
+
+            {/* اللوحة الكلاسيكية بإطار ذهبي */}
+            <div className="relative mx-auto w-full max-w-xl">
+              <div className="rounded-sm border-[10px] border-[#c9a227] bg-[#c9a227] shadow-xl">
+                <div className="rounded-sm border-2 border-[#8a6d1d] bg-[#8a6d1d] p-1">
+                  <img
+                    src={heroImage}
+                    alt="طلاب يتخرجون أمام بوابة جامعة صينية تقليدية"
+                    className="w-full rounded-sm object-cover"
+                  />
+                </div>
+              </div>
+              <div className="mt-4 rounded-sm border border-[#c9a227]/60 bg-white px-4 py-3 text-center shadow-sm">
+                <p className="text-sm font-bold text-[#1b2f52]">
+                  «العلم يفتح أبواب المستقبل» — درّبنا أكثر من 2500 طالب وطالبة
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-6 lg:grid-cols-4">
+          {/* الإحصائيات */}
+          <div className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-sm border-2 border-[#c9a227] bg-[#c9a227] lg:grid-cols-4">
             {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur"
-              >
-                <div className="text-3xl font-black text-emerald-300 sm:text-4xl">
+              <div key={stat.label} className="bg-[#1b2f52] px-6 py-6 text-center">
+                <div className="text-3xl font-bold text-[#e6c86e]" style={{ fontFamily: 'Amiri, serif' }}>
                   {stat.value}
                 </div>
-                <div className="mt-2 text-sm font-medium text-emerald-100/80">
+                <div className="mt-1.5 text-sm font-semibold text-[#c8d3e8]">
                   {stat.label}
                 </div>
               </div>
