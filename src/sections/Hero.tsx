@@ -9,6 +9,7 @@ const navLinks = [
   { href: '#bachelor', label: 'البكالوريوس' },
   { href: '#chinese', label: 'اللغة الصينية' },
   { href: '#steps', label: 'خطوات التقديم' },
+  { href: '#register', label: 'التسجيل' },
   { href: '#contact', label: 'تواصل معنا' },
 ]
 
@@ -46,7 +47,7 @@ export default function Hero() {
 
           <div className="hidden lg:block">
             <Button asChild className="font-bold">
-              <a href="#steps">قدّم الآن</a>
+              <a href="#register">قدّم الآن</a>
             </Button>
           </div>
 
@@ -75,7 +76,7 @@ export default function Hero() {
               ))}
               <li>
                 <Button asChild className="w-full font-bold">
-                  <a href="#steps">قدّم الآن</a>
+                  <a href="#register">قدّم الآن</a>
                 </Button>
               </li>
             </ul>

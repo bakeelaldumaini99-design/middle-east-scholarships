@@ -38,7 +38,7 @@ export function Steps() {
 
         <div className="mt-12 text-center">
           <Button asChild size="lg" className="font-bold">
-            <a href="#contact">ابدأ طلبك الآن</a>
+            <a href="#register">ابدأ طلبك الآن</a>
           </Button>
         </div>
       </div>
@@ -77,12 +77,18 @@ export function Footer() {
               <li><a className="hover:text-emerald-300" href="#bachelor">برامج البكالوريوس</a></li>
               <li><a className="hover:text-emerald-300" href="#chinese">برنامج اللغة الصينية</a></li>
               <li><a className="hover:text-emerald-300" href="#steps">خطوات التقديم</a></li>
+              <li><a className="hover:text-emerald-300" href="#register">التسجيل عبر المؤسسة</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-extrabold">تواصل معنا</h4>
             <ul className="mt-4 space-y-3 text-sm text-emerald-100/70">
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-emerald-300" />
+                <span>واتساب (اليمن):</span>
+                <span dir="ltr" className="font-bold text-white">+967 716 621 214</span>
+              </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-emerald-300" />
                 <span dir="ltr">+971 50 000 0000</span>
