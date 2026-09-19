@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Menu, X, Award, BadgeCheck, Languages, Plane, UserCheck, MessagesSquare, BookOpenCheck } from 'lucide-react'
 import { stats } from '@/data/content'
-import logo from '@/assets/logo.jpg'
-import heroImage from '@/assets/hero-classic.jpg'
+import logo from '@/assets/logo.svg'
+import heroImage from '@/assets/hero-classic.svg'
 
 const navLinks = [
   { href: '#home', label: 'الرئيسية' },

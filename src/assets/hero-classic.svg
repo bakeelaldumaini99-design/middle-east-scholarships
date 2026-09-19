@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f1e1"/>
+      <stop offset="55%" stop-color="#f2e8cf"/>
+      <stop offset="100%" stop-color="#e9dcba"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a4a7f"/>
+      <stop offset="100%" stop-color="#16294a"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf7ec"/>
+      <stop offset="100%" stop-color="#efe4c8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- السماء -->
+  <rect width="800" height="560" fill="url(#sky)"/>
+
+  <!-- الشمس الذهبية -->
+  <circle cx="400" cy="130" r="52" fill="#e6c86e" opacity="0.9"/>
+  <circle cx="400" cy="130" r="66" fill="none" stroke="#c9a227" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="400" cy="130" r="80" fill="none" stroke="#c9a227" stroke-width="1" opacity="0.25"/>
+
+  <!-- طيور -->
+  <g stroke="#4a5878" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M150 110 q7 -8 14 0 q7 -8 14 0"/>
+    <path d="M205 88 q6 -7 12 0 q6 -7 12 0"/>
+    <path d="M610 96 q7 -8 14 0 q7 -8 14 0"/>
+    <path d="M655 125 q5 -6 11 0 q5 -6 11 0"/>
+  </g>
+
+  <!-- جبال بعيدة -->
+  <path d="M0 300 L90 240 L170 292 L260 232 L350 296 L450 248 L540 300 L640 244 L730 296 L800 260 L800 560 L0 560 Z" fill="#c9d3e8" opacity="0.5"/>
+
+  <!-- أرضية -->
+  <rect y="430" width="800" height="130" fill="#e2d5b4"/>
+  <rect y="430" width="800" height="6" fill="#c9a227" opacity="0.6"/>
+
+  <!-- الأشجار الجانبية -->
+  <g>
+    <rect x="86" y="330" width="10" height="110" rx="3" fill="#5a4a32"/>
+    <circle cx="91" cy="300" r="46" fill="#7d8f6a"/>
+    <circle cx="66" cy="322" r="30" fill="#8fa07c"/>
+    <circle cx="118" cy="320" r="32" fill="#8fa07c"/>
+    <rect x="700" y="330" width="10" height="110" rx="3" fill="#5a4a32"/>
+    <circle cx="705" cy="300" r="46" fill="#7d8f6a"/>
+    <circle cx="680" cy="322" r="30" fill="#8fa07c"/>
+    <circle cx="732" cy="320" r="32" fill="#8fa07c"/>
+  </g>
+
+  <!-- السور الجانبي -->
+  <g>
+    <rect x="150" y="360" width="120" height="80" fill="url(#wall)" stroke="#c9a227" stroke-width="2"/>
+    <rect x="530" y="360" width="120" height="80" fill="url(#wall)" stroke="#c9a227" stroke-width="2"/>
+    <rect x="150" y="348" width="120" height="16" fill="url(#roof)" stroke="#c9a227" stroke-width="1.5"/>
+    <rect x="530" y="348" width="120" height="16" fill="url(#roof)" stroke="#c9a227" stroke-width="1.5"/>
+  </g>
+
+  <!-- البوابة الرئيسية: السقف السفلي -->
+  <g>
+    <!-- أعمدة -->
+    <rect x="296" y="270" width="16" height="170" fill="#8a2f2a"/>
+    <rect x="296" y="270" width="16" height="170" fill="none" stroke="#6d211d" stroke-width="1.5"/>
+    <rect x="488" y="270" width="16" height="170" fill="#8a2f2a"/>
+    <rect x="488" y="270" width="16" height="170" fill="none" stroke="#6d211d" stroke-width="1.5"/>
+    <rect x="352" y="300" width="14" height="140" fill="#8a2f2a"/>
+    <rect x="434" y="300" width="14" height="140" fill="#8a2f2a"/>
+    <!-- جدار البوابة -->
+    <rect x="270" y="300" width="260" height="140" fill="url(#wall)" stroke="#c9a227" stroke-width="2.5"/>
+    <!-- فتحة الباب المركزية -->
+    <path d="M365 440 v-70 a35 35 0 0 1 70 0 v70 z" fill="#3a2c1c"/>
+    <path d="M365 440 v-70 a35 35 0 0 1 70 0 v70" fill="none" stroke="#c9a227" stroke-width="3"/>
+    <!-- سلّم البوابة -->
+    <rect x="352" y="440" width="96" height="8" fill="#d9c99e" stroke="#b39a5e" stroke-width="1.5"/>
+    <rect x="344" y="448" width="112" height="8" fill="#d9c99e" stroke="#b39a5e" stroke-width="1.5"/>
+    <rect x="336" y="456" width="128" height="8" fill="#d9c99e" stroke="#b39a5e" stroke-width="1.5"/>
+    <!-- سقف سفلي ممتد بأطراف مرتفعة -->
+    <path d="M230 262 q30 8 60 8 h220 q30 0 60 -8 l-14 -26 q-40 12 -80 12 h-152 q-40 0 -80 -12 z" fill="url(#roof)" stroke="#c9a227" stroke-width="2"/>
+    <path d="M230 262 q-12 -4 -18 -14 q14 2 22 10 z" fill="#16294a" stroke="#c9a227" stroke-width="1.5"/>
+    <path d="M570 262 q12 -4 18 -14 q-14 2 -22 10 z" fill="#16294a" stroke="#c9a227" stroke-width="1.5"/>
+    <rect x="238" y="266" width="324" height="6" fill="#c9a227" opacity="0.8"/>
+  </g>
+
+  <!-- الطابق العلوي -->
+  <g>
+    <rect x="330" y="196" width="140" height="52" fill="url(#wall)" stroke="#c9a227" stroke-width="2"/>
+    <!-- نافذتان -->
+    <rect x="346" y="206" width="26" height="34" fill="#3a2c1c" stroke="#c9a227" stroke-width="2"/>
+    <rect x="428" y="206" width="26" height="34" fill="#3a2c1c" stroke="#c9a227" stroke-width="2"/>
+    <!-- لوحة الاسم -->
+    <rect x="378" y="202" width="44" height="40" rx="3" fill="#101f3c" stroke="#e6c86e" stroke-width="2.5"/>
+    <text x="400" y="228" text-anchor="middle" font-family="serif" font-size="20" fill="#e6c86e" font-weight="bold">學</text>
+    <!-- سقف علوي -->
+    <path d="M272 170 q40 14 80 14 h96 q40 0 80 -14 l-12 -24 q-34 12 -68 12 h-96 q-34 0 -68 -12 z" fill="url(#roof)" stroke="#c9a227" stroke-width="2"/>
+    <path d="M272 170 q-14 -5 -20 -16 q15 3 24 12 z" fill="#16294a" stroke="#c9a227" stroke-width="1.5"/>
+    <path d="M528 170 q14 -5 20 -16 q-15 3 -24 12 z" fill="#16294a" stroke="#c9a227" stroke-width="1.5"/>
+    <rect x="280" y="174" width="240" height="5" fill="#c9a227" opacity="0.8"/>
+    <!-- القمة -->
+    <path d="M388 132 h24 l8 14 h-40 z" fill="#16294a" stroke="#c9a227" stroke-width="1.5"/>
+    <circle cx="400" cy="126" r="7" fill="#c9a227"/>
+  </g>
+
+  <!-- طلاب متخرجون في المقدمة -->
+  <g fill="#16294a">
+    <!-- طالب 1 -->
+    <g>
+      <circle cx="255" cy="466" r="9"/>
+      <path d="M243 476 h24 l4 44 h-32 z"/>
+      <polygon points="255,452 272,458 255,464 238,458" fill="#c9a227"/>
+      <line x1="272" y1="458" x2="272" y2="472" stroke="#c9a227" stroke-width="1.5"/>
+    </g>
+    <!-- طالبة 2 -->
+    <g>
+      <circle cx="300" cy="472" r="8"/>
+      <path d="M290 481 h20 l6 40 h-32 z"/>
+      <polygon points="300,459 315,464 300,469 285,464" fill="#c9a227"/>
+    </g>
+    <!-- طالب 3 يمين -->
+    <g>
+      <circle cx="548" cy="468" r="9"/>
+      <path d="M536 478 h24 l4 42 h-32 z"/>
+      <polygon points="548,454 565,460 548,466 531,460" fill="#c9a227"/>
+      <line x1="531" y1="460" x2="531" y2="474" stroke="#c9a227" stroke-width="1.5"/>
+    </g>
+    <!-- طالبة 4 -->
+    <g>
+      <circle cx="592" cy="474" r="8"/>
+      <path d="M582 483 h20 l6 38 h-32 z"/>
+      <polygon points="592,461 607,466 592,471 577,466" fill="#c9a227"/>
+    </g>
+  </g>
+
+  <!-- ظلال الأرض -->
+  <ellipse cx="400" cy="528" rx="330" ry="10" fill="#c9a227" opacity="0.25"/>
+</svg>
