@@ -5,9 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="مؤسسة الشرق الأوسط للمنح الدراسية — منح دراسية للبكالوريوس وبرامج اللغة الصينية في أعرق الجامعات الصينية" />
     <title>مؤسسة الشرق الأوسط للمنح الدراسية</title>
+    <style>
+      /* شاشة التحميل الاحتياطية: تعمل بدون JavaScript تمامًا */
+      .fallback-loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #134e4a 100%);
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+        text-align: center;
+        padding: 24px;
+        z-index: 9999;
+      }
+      .fallback-loader .logo {
+        font-size: 42px;
+      }
+      .fallback-loader h1 {
+        font-size: 22px;
+        font-weight: 800;
+        margin: 0;
+      }
+      .fallback-loader p {
+        font-size: 14px;
+        color: #a7f3d0;
+        margin: 0;
+        max-width: 320px;
+      }
+      .fallback-loader .spinner {
+        width: 42px;
+        height: 42px;
+        border: 4px solid rgba(255, 255, 255, 0.2);
+        border-top-color: #34d399;
+        border-radius: 50%;
+        animation: fallback-spin 1s linear infinite;
+      }
+      @keyframes fallback-spin {
+        to { transform: rotate(360deg); }
+      }
+      .fallback-loader .phone {
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        background: rgba(52, 211, 153, 0.15);
+        border: 1px solid rgba(52, 211, 153, 0.4);
+        padding: 10px 20px;
+        border-radius: 999px;
+        direction: ltr;
+      }
+      .fallback-loader .note {
+        font-size: 12px;
+        color: #6ee7b7;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- محتوى احتياطي يظهر فورًا ويحل محله تطبيق React فور جاهزيته -->
+      <div class="fallback-loader">
+        <div class="logo">🎓</div>
+        <h1>مؤسسة الشرق الأوسط للمنح الدراسية</h1>
+        <p>منح دراسية للبكالوريوس وبرامج اللغة الصينية في أعرق الجامعات الصينية</p>
+        <div class="spinner"></div>
+        <div class="phone">+967 716 621 214</div>
+        <p class="note">إذا استمر التحميل طويلًا، تواصل معنا مباشرة عبر واتساب على الرقم أعلاه</p>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
